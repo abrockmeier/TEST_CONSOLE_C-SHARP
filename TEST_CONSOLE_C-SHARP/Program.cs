@@ -44,6 +44,15 @@ namespace TEST_CONSOLE_C_SHARP
 					"{3} ", a, b, c, ergebnis);
 					flaecheVolumen = false;
 				}
+
+				else if ((a == 0 && b == 0) || (b == 0 && c == 0) || c == 0 && a == 0 || (a == 0 && b == 0 && c == 0))
+				{
+					ergebnis = a + b + c;
+					Console.WriteLine("mindestens zwei Zahlen sind 0");
+					Console.WriteLine("Sie haben {0}, {1}, und {2} eingegeben!" +
+					"Das Ergebnis lautet: {3}",a, b, c, ergebnis);
+					keineFoderV = true;
+				}
 				else if (a == 0) 
 				{
 				// Fläche
@@ -70,14 +79,7 @@ namespace TEST_CONSOLE_C_SHARP
 					"{2} ", a, b, ergebnis);
 					flaecheVolumen = true;
 				}
-				else
-				{
-					ergebnis = a + b + c;
-					Console.WriteLine("mindestens zwei Zahlen sind 0");
-					Console.WriteLine("Sie haben {0}, {1}, und {2} eingegeben!" +
-					"Das Ergebnis lautet: {3}",a, b, c, ergebnis);
-					keineFoderV = true;
-				}
+				
 
 			}
 			else
