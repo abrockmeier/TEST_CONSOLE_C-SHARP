@@ -28,6 +28,8 @@ namespace TEST_CONSOLE_C_SHARP
 		Console.WriteLine("Bitte geben Sie die dritte Ganzahl ein:");
 		eingabe = Console.ReadLine();
 		cValid = Int32.TryParse(eingabe, out c);
+		
+		Console.WriteLine("");
 
 			//Verarbeitung und (teilweise)Ausgabe
 			if (aValid && bValid && cValid)
@@ -45,27 +47,27 @@ namespace TEST_CONSOLE_C_SHARP
 				else if (a == 0) 
 				{
 				// Fläche
-					ergebnis = a * b * c;
+					ergebnis = b * c;
 					volumen = Convert.ToString(ergebnis);
-					Console.WriteLine("Die eingegebenen Zahlen {0}, {1}, {2} ergeben eine Gesamtfläche von:" +
-					"{3} ", a, b, c, ergebnis);
+					Console.WriteLine("Die eingegebenen Zahlen {0}, {1}, ergeben eine Gesamtfläche von:" +
+					"{2} ", b, c, ergebnis);
 					flaecheVolumen = true;
 				}
 				else if (b == 0) 
 				{
 				// Fläche
-					ergebnis = a * b * c;
+					ergebnis = a * c;
 					flaeche = Convert.ToString(ergebnis);
-					Console.WriteLine("Die eingegebenen Zahlen {0}, {1}, {2} ergeben eine Gesamtfläche von:" +
-					"{3} ", a, b, c, ergebnis);
+					Console.WriteLine("Die eingegebenen Zahlen {0}, {1}, ergeben eine Gesamtfläche von:" +
+					"{2} ", a,  c, ergebnis);
 					flaecheVolumen = true;
 				}
 				else if (c == 0) 
 				{
 				// Fläche
-					ergebnis = a * b * c;
-					Console.WriteLine("Die eingegebenen Zahlen {0}, {1}, {2} ergeben eine Gesamtfläche von:" +
-					"{3} ", a, b, c, ergebnis);
+					ergebnis = a * b;
+					Console.WriteLine("Die eingegebenen Zahlen {0}, {1}, ergeben eine Gesamtfläche von:" +
+					"{2} ", a, b, ergebnis);
 					flaecheVolumen = true;
 				}
 				else
@@ -98,7 +100,7 @@ namespace TEST_CONSOLE_C_SHARP
 			}
 			else if (flaecheVolumen == false)
 			{ 
-				Console.WriteLine("Die Fläche beträgt: {0}", flaeche);
+				Console.WriteLine("Das Volumen beträgt: {0}", volumen);
 			}
 			else if (keineFoderV == true)
 			{
