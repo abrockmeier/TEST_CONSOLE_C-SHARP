@@ -87,7 +87,7 @@ namespace TEST_CONSOLE_C_SHARP
 				Console.WriteLine("Sie haben keine Ganzzahlen eingegeben! Bitte Programm erneut aufrufen...");
 			}
 
-			for (int i = 0; i < 15; i++)
+			for (int i = 0; i < 51; i++)
 			{
 				text = text + "*" ;
 			}
